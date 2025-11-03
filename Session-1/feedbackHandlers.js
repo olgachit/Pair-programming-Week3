@@ -23,13 +23,13 @@ const getFeedbackById = (req, res) => {
 };
 
 const updateFeedback = (req, res) => {
-  const updated = Feedback.updateOne(req.params.feedbackId, req.body);
+  const updated = Feedback.updateById(req.params.feedbackId, req.body);
   if (!updated) return res.status(404).json({ message: "Feedback not found" });
   res.status(200).json(updated);
 };
 
 const deleteFeedback = (req, res) => {
-  const deleted = Feedback.deleteOne(req.params.feedbackId);
+  const deleted = Feedback.deleteById(req.params.feedbackId);
   if (!deleted) return res.status(404).json({ message: "Feedback not found" });
   res.status(204).send();
 };
