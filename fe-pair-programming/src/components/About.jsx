@@ -1,4 +1,6 @@
 import aboutImg from '../assets/images/about.jpeg'
+import React from 'react';
+import styles from '../About.module.css';
 
 const About = () => {
   return (
@@ -9,14 +11,14 @@ const About = () => {
     </h2>
   </div>
   <div className="section-center about-center">
-    <div className="about-img">
+    <div className={styles['about-img']}>
       <img
         src={aboutImg}
-        className="about-photo"
+        className={styles['about-photo']}
         alt="awesome beach"
       />
     </div>
-    <article className="about-info">
+    <article className={styles['about-info']}>
       <h3>explore the difference</h3>
       <p>
         Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aspernatur
@@ -28,7 +30,7 @@ const About = () => {
         quisquam harum nam cumque temporibus explicabo dolorum sapiente odio
         unde dolor?
       </p>
-      <a href="#" className="btn">
+      <a href="#" className={styles.btn}>
         read more
       </a>
     </article>
