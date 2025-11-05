@@ -3,6 +3,7 @@ import tour1 from '../assets/images/tour-1.jpeg';
 import tour2 from '../assets/images/tour-2.jpeg';
 import tour3 from '../assets/images/tour-3.jpeg';
 import tour4 from '../assets/images/tour-4.jpeg';
+import styles from '../Tours.module.css';
 
 const tours = [
   {
@@ -55,7 +56,7 @@ function Tours() {
           featured <span>tours</span>
         </h2>
       </div>
-      <div className="section-center featured-center">
+      <div className={`section-center ${styles['featured-center']}`}>
         {tours.map((tour) => (
           <Tour key={tour.id} {...tour} />
         ))}
